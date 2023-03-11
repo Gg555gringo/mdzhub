@@ -1,0 +1,45 @@
+if game.PlaceId == 11553926427 then
+local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/shlexware/Orion/main/source')))()
+local Window = OrionLib:MakeWindow({Name = "Mdz Hub 2.0 🇧🇷", HidePremium = false, SaveConfig = true, ConfigFolder = "Mdz Hub"})
+OrionLib:MakeNotification({
+	Name = "MdzHub",
+	Content = "Bem Vindo Ao Mdz Hub",
+	Image = "rbxassetid://4483345998",
+	Time = 5
+})
+
+--global
+_G.FruitTab = false
+_G.StatsTab = false
+
+--tabs
+local FruitTab = Window:MakeTab({
+    Name = "Fruit",
+    Icon = "rbxassetid://4483345998",
+    PremiumOnly = false
+})
+
+local StatsTab = Window:MakeTab({
+    Name = "Stats (Soon)",
+    Icon = "rbxassetid://4483345998",
+    PremiumOnly = false
+})
+
+--toggle
+FruitTab:AddToggle({
+    Name = "Auto Spin Legendary",
+    Default = false,
+    Callback = function(Value)
+        _G.FruitTab = Value
+        while _G.FruitTab==true do
+         local args = {
+    [1] = "Legendary" --Pode Trocar por Common Uncommon Epic or Legendary
+}
+
+game:GetService("Players"):WaitForChild("moisesgamesblue"):WaitForChild("PlayerGui"):WaitForChild("SpinGui"):WaitForChild("LOL"):WaitForChild("Spin"):WaitForChild("Spin"):WaitForChild("Reward"):FireServer(unpack(args))
+        end
+    end    
+})
+
+OrionLib:Init()
+end
