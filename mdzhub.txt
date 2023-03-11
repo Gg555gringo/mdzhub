@@ -36,7 +36,7 @@ FruitTab:AddToggle({
     [1] = "Legendary" --Pode Trocar por Common Uncommon Epic or Legendary
 }
 
-game:GetService("Players"):WaitForChild("moisesgamesblue"):WaitForChild("PlayerGui"):WaitForChild("SpinGui"):WaitForChild("LOL"):WaitForChild("Spin"):WaitForChild("Spin"):WaitForChild("Reward"):FireServer(unpack(args))
+game:GetService("Players"):WaitForChild("gring8mdz"):WaitForChild("PlayerGui"):WaitForChild("SpinGui"):WaitForChild("LOL"):WaitForChild("Spin"):WaitForChild("Spin"):WaitForChild("Reward"):FireServer(unpack(args))
         end
     end    
 })
