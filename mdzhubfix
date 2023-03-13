@@ -1,0 +1,197 @@
+if game.PlaceId == 11918983084 then
+local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/shlexware/Orion/main/source')))()
+local Window = OrionLib:MakeWindow({Name = "Mdz Hub", HidePremium = false, SaveConfig = true, ConfigFolder = "Mdz Hub"})
+
+--global
+_G.FruitTab = false
+_G.BauTab = false
+
+
+
+function TP()
+local TweenService = game:GetService("TweenService")
+local Tw = TweenService:Create(game.Players.LocalPlayer.Character.HumanoidRootPart, TweenInfo.new(1, Enum.EasingStyle.Linear, Enum.EasingDirection.Out,0,false,0), 
+{CFrame = CFrame.new(133.3765869140625, 16.99997901916504, 593.87744140625)}):Play()
+end
+
+function TP2()
+  local TweenService = game:GetService("TweenService")
+local Tw = TweenService:Create(game.Players.LocalPlayer.Character.HumanoidRootPart, TweenInfo.new(1, Enum.EasingStyle.Linear, Enum.EasingDirection.Out,0,false,0), 
+{CFrame = CFrame.new(1868.9267578125, 15.056715965270996, -263.5151062011719)}):Play()
+end
+
+function TP3()
+  local TweenService = game:GetService("TweenService")
+local Tw = TweenService:Create(game.Players.LocalPlayer.Character.HumanoidRootPart, TweenInfo.new(1, Enum.EasingStyle.Linear, Enum.EasingDirection.Out,0,false,0), 
+{CFrame = CFrame.new(-776.8699340820312, 15.56256103515625, -2367.167236328125)}):Play()
+end
+
+function TP4()
+  local TweenService = game:GetService("TweenService")
+local Tw = TweenService:Create(game.Players.LocalPlayer.Character.HumanoidRootPart, TweenInfo.new(1, Enum.EasingStyle.Linear, Enum.EasingDirection.Out,0,false,0), 
+{CFrame = CFrame.new(-3043.69287109375, 24.222131729125977, -2541.435546875)}):Play()
+end
+
+function TP5()
+  local TweenService = game:GetService("TweenService")
+local Tw = TweenService:Create(game.Players.LocalPlayer.Character.HumanoidRootPart, TweenInfo.new(1, Enum.EasingStyle.Linear, Enum.EasingDirection.Out,0,false,0), 
+{CFrame = CFrame.new(-2164.0751953125, 18.895620346069336, -39.19483184814453)}):Play()
+end
+
+function TP6()
+ local TweenService = game:GetService("TweenService")
+local Tw = TweenService:Create(game.Players.LocalPlayer.Character.HumanoidRootPart, TweenInfo.new(1, Enum.EasingStyle.Linear, Enum.EasingDirection.Out,0,false,0), 
+{CFrame = CFrame.new(167.4674072265625, 16.30518913269043, 3755.226318359375)}):Play()
+end
+
+function TP7()
+ local TweenService = game:GetService("TweenService")
+local Tw = TweenService:Create(game.Players.LocalPlayer.Character.HumanoidRootPart, TweenInfo.new(1, Enum.EasingStyle.Linear, Enum.EasingDirection.Out,0,false,0), 
+{CFrame = CFrame.new(-861.9806518554688, 17.925683975219727, 5272.31494140625)}):Play()
+end
+
+function TP8()
+ local TweenService = game:GetService("TweenService")
+local Tw = TweenService:Create(game.Players.LocalPlayer.Character.HumanoidRootPart, TweenInfo.new(1, Enum.EasingStyle.Linear, Enum.EasingDirection.Out,0,false,0), 
+{CFrame = CFrame.new(-2339.415283203125, 80.43317413330078, 3581.427490234375)}):Play()
+end
+
+function TP9()
+ local TweenService = game:GetService("TweenService")
+local Tw = TweenService:Create(game.Players.LocalPlayer.Character.HumanoidRootPart, TweenInfo.new(1, Enum.EasingStyle.Linear, Enum.EasingDirection.Out,0,false,0), 
+{CFrame = CFrame.new(4381.76513671875, 416.7387390136719, 4189.3662109375)}):Play()
+end
+
+function TP10()
+ local TweenService = game:GetService("TweenService")
+local Tw = TweenService:Create(game.Players.LocalPlayer.Character.HumanoidRootPart, TweenInfo.new(1, Enum.EasingStyle.Linear, Enum.EasingDirection.Out,0,false,0), 
+{CFrame = CFrame.new(4989.259765625, 17.464351654052734, 1546.19189453125)}):Play()
+end
+
+function TP11()
+ local TweenService = game:GetService("TweenService")
+local Tw = TweenService:Create(game.Players.LocalPlayer.Character.HumanoidRootPart, TweenInfo.new(1, Enum.EasingStyle.Linear, Enum.EasingDirection.Out,0,false,0), 
+{CFrame = CFrame.new(3413.3818359375, 872.17822265625, 3562.116943359375)}):Play()
+end
+
+
+Tab:AddLabel("Scripts:Pigeon")
+Tab:AddLabel("By Gringo And Pigeon")
+
+--tabs
+local TPTab = Window:MakeTab({
+    Name = "Teleport",
+    Icon = "rbxassetid://4483345998",
+    PremiumOnly = false
+})
+
+local BauTab = Window:MakeTab({
+    Name = "Farm",
+    Icon = "rbxassetid://4483345998",
+    PremiumOnly = false
+})
+
+--toggle
+BauTab:AddToggle({
+    Name = "Farm Chest",
+    Default = false,
+    Callback = function(Value)
+        _G.BauTab = Value
+        while _G.BauTab do
+for i,v in pairs(game:GetService("Workspace").Amazernamento.bau:GetDescendants()) do
+    if v.Name == "TouchInterest" then
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = v.Parent.CFrame
+wait(.1)
+        end
+      end
+      end
+      end
+})
+
+
+TPTab:AddButton({
+	Name = "Ilha Inicial",
+	Callback = function(Value)
+           TP()
+   end
+})
+
+TPTab:AddButton({
+	Name = "Ilha dos Mamaco",
+	Callback = function()
+      		TP2()
+  	end    
+})
+
+TPTab:AddButton({
+	Name = "Ilha De Gelo",
+	Callback = function()
+      		TP3()
+  	end    
+})
+
+TPTab:AddButton({
+	Name = "Puzzle",
+	Callback = function()
+      		TP4()
+  	end    
+})
+
+TPTab:AddButton({
+	Name = "Ilha Do Buggy",
+	Callback = function()
+      		TP5()
+  	end    
+})          
+
+TPTab:AddButton({
+	Name = "Deserto",
+	Callback = function()
+      		TP6()
+  	end    
+})
+
+TPTab:AddButton({
+	Name = "Marine Ford",
+	Callback = function()
+      		TP7()
+  	end    
+})
+
+TPTab:AddButton({
+	Name = "Mihalk Island",
+	Callback = function()
+      		TP8()
+  	end    
+})
+
+TPTab:AddButton({
+	Name = "SkyPia",
+	Callback = function()
+      		TP9()
+  	end    
+})
+
+TPTab:AddButton({
+	Name = "Ilha Do Vulcão",
+	Callback = function()
+      		TP10()
+  	end    
+})
+
+TPTab:AddButton({
+	Name = "SkyPia 2",
+	Callback = function()
+      		TP11()
+  	end    
+})
+      		    
+
+
+
+
+
+
+
+OrionLib:Init()
+end
