@@ -74,7 +74,6 @@ local Tw = TweenService:Create(game.Players.LocalPlayer.Character.HumanoidRootPa
 {CFrame = CFrame.new(3413.3818359375, 872.17822265625, 3562.116943359375)}):Play()
 end
 
-
 --tabs
 local TPTab = Window:MakeTab({
     Name = "Teleport",
@@ -84,12 +83,6 @@ local TPTab = Window:MakeTab({
 
 local BauTab = Window:MakeTab({
     Name = "Farm",
-    Icon = "rbxassetid://4483345998",
-    PremiumOnly = false
-})
-
-local CreditsTab = Window:MakeTab({
-    Name = "Creditos",
     Icon = "rbxassetid://4483345998",
     PremiumOnly = false
 })
