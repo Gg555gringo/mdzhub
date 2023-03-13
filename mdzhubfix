@@ -75,9 +75,6 @@ local Tw = TweenService:Create(game.Players.LocalPlayer.Character.HumanoidRootPa
 end
 
 
-CreditsTab:AddLabel("Scripts:Pigeon")
-CreditsTab:AddLabel("By Gringo And Pigeon")
-
 --tabs
 local TPTab = Window:MakeTab({
     Name = "Teleport",
