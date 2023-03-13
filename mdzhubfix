@@ -75,8 +75,8 @@ local Tw = TweenService:Create(game.Players.LocalPlayer.Character.HumanoidRootPa
 end
 
 
-Tab:AddLabel("Scripts:Pigeon")
-Tab:AddLabel("By Gringo And Pigeon")
+CreditsTab:AddLabel("Scripts:Pigeon")
+CreditsTab:AddLabel("By Gringo And Pigeon")
 
 --tabs
 local TPTab = Window:MakeTab({
@@ -87,6 +87,12 @@ local TPTab = Window:MakeTab({
 
 local BauTab = Window:MakeTab({
     Name = "Farm",
+    Icon = "rbxassetid://4483345998",
+    PremiumOnly = false
+})
+
+local CreditsTab = Window:MakeTab({
+    Name = "Creditos",
     Icon = "rbxassetid://4483345998",
     PremiumOnly = false
 })
