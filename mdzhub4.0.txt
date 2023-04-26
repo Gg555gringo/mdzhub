@@ -1,0 +1,121 @@
+if game.PlaceId == 12616541908 then
+local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/shlexware/Orion/main/source')))()
+local Window = OrionLib:MakeWindow({Name = "Mdz Hub 2.0 🇧🇷", HidePremium = false, SaveConfig = true, ConfigFolder = "Mdz Hub"})
+OrionLib:MakeNotification({
+	Name = "MdzHub",
+	Content = "Bem Vindo Ao Mdz Hub",
+	Image = "rbxassetid://4483345998",
+	Time = 5
+})
+
+--global
+_G.FruitTab = false
+_G.StatsTab = false
+
+
+
+function TP()
+game:GetService("ReplicatedStorage").Remotes.CanBuy:FireServer(0)
+})
+
+function TP2()
+  local args = {
+    [1] = "Operator Sword",
+    [2] = 0,
+    [3] = "Beli" -- GiantEgg
+}
+
+game:GetService("ReplicatedStorage").Remotes.SwordPurchaseRE:FireServer(unpack(args))
+})
+
+function TP3()
+  local args = {
+    [1] = "Eternal Blade",
+    [2] = 0,
+    [3] = "Beli" -- GiantEgg
+}
+
+game:GetService("ReplicatedStorage").Remotes.SwordPurchaseRE:FireServer(unpack(args))
+})
+
+function TP4()
+  local args = {
+    [1] = "Egg Sword",
+    [2] = 0,
+    [3] = "Beli" -- GiantEgg
+}
+
+game:GetService("ReplicatedStorage").Remotes.SwordPurchaseRE:FireServer(unpack(args))
+})
+
+function TP5()
+ local args = {
+    [1] = "True Triple Katana",
+    [2] = 0,
+    [3] = "Beli" -- GiantEgg
+}
+
+game:GetService("ReplicatedStorage").Remotes.SwordPurchaseRE:FireServer(unpack(args))
+})
+
+--tabs
+local FruitTab = Window:MakeTab({
+    Name = "Fruit",
+    Icon = "rbxassetid://4483345998",
+    PremiumOnly = false
+})
+
+local MiscTab = Window:MakeTab({
+    Name = "Sword",
+    Icon = "rbxassetid://4483345998",
+    PremiumOnly = false
+})
+
+--toggle
+
+
+FruitTab:AddButton({
+	Name = "Spin Fruit",
+	Callback = function(Value)
+           TP()
+   end
+})
+
+MiscTab:AddButton({
+	Name = "Buy Yoru",
+	Callback = function()
+      		TP3()
+  	end    
+})
+
+MiscTab:AddButton({
+	Name = "Buy Operator Sword",
+	Callback = function()
+      		TP2()
+  	end    
+})
+
+MiscTab:AddButton({
+	Name = "Buy Egg Katana",
+	Callback = function()
+      		TP4()
+  	end    
+})
+
+MiscTab:AddButton({
+	Name = "Buy Triple Katana",
+	Callback = function()
+      		TP5()
+  	end    
+})          
+      		    
+
+
+
+
+
+
+
+})
+OrionLib:Init()
+end
